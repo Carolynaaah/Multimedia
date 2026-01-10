@@ -1,0 +1,95 @@
+ body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+ #keyboard {
+     background-color: #333;
+     border: 1px solid black;
+     padding: 200px 20px 30px 20px;
+     border-radius: 18px;
+     overflow: hidden;
+     width: min(96vw, 1400px);
+     box-shadow: 4px 10px 20px grey;
+ }
+
+ #keypad {
+     background-color: darkred;
+     display: flex;
+ }
+
+ .whiteKey {
+     height: 240px;
+     width: 40px;
+     background-color: white;
+     border: 1px solid black;
+     border-radius: 0 0 8px 8px;
+     flex: 1 1 0;
+     position: relative;
+     box-shadow:
+    inset 0 -10px 16px rgba(0,0,0,.16),
+    inset 0 2px 0 rgba(255,255,255,.7);
+ }
+
+ #whiteRow{
+  display: flex;
+  width: 100%;
+}
+
+ .blackKey {
+     height: 140px;
+     width: 24px;
+     background-color: black;
+     border: 1px solid black;
+     margin: 0 -13px;
+     z-index: 2;
+     border-radius: 0 0 6px 6px;
+     position: relative;
+     box-shadow:
+    0 6px 10px rgba(0,0,0,.45),
+    inset 0 -6px 10px rgba(255,255,255,.08);
+ }
+
+ .whiteKey:hover{
+  background-color: #f0f0f0;
+  box-shadow:
+    inset 0 -6px 10px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.65);
+}
+
+.blackKey:hover{
+  background-color: #333;
+  box-shadow:
+    0 3px 7px rgba(0,0,0,.45),
+    inset 0 -3px 7px rgba(255,255,255,.06);
+}
+
+.key{
+  transition: background-color 0.15s;
+}
+
+.label{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+  font-size: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  pointer-events: none;
+}
+
+.whiteKey .label{
+  color: #222;
+}
+
+.blackKey .label{
+  color: #eee;
+  bottom: 8px;
+}
+
+
+
